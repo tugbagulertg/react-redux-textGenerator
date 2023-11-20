@@ -1,14 +1,5 @@
 import { CopyIcon } from "@chakra-ui/icons";
-import {
-  Badge,
-  Box,
-  Button,
-  Flex,
-  Img,
-  Text,
-  useClipboard,
-  useStatStyles,
-} from "@chakra-ui/react";
+import { Box, Button, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 
@@ -40,7 +31,7 @@ function TextArea() {
         w={"min-content"}
         h={"40px"}
         position={"absolute"}
-        _hover={{bg:"gray.600"}}
+        _hover={{ bg: "gray.600" }}
         p={"5px"}
         // m={"10px"}
 

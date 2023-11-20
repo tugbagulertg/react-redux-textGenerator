@@ -18,7 +18,7 @@ import {
   isHtml,
   paragraphsCount,
 } from "../../redux/paragraphsSlice";
-import { CopyIcon } from "@chakra-ui/icons";
+
 
 function Navbar() {
   const dispatch = useDispatch();
