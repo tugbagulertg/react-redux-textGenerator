@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { Box, Container, Flex } from "@chakra-ui/react";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import TextArea from "./components/TextArea";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Box pb={"30px"} textColor={"whiteAlpha.900"}  minHeight={"100vh"} bg={"gray.800"}>
+        <Container maxW={"1100px"} pt={"25px"} >
+          <Box
+            borderRadius={"3xl"}
+            bgColor={"gray.700"}
+            p={{ base: "14px", sm: "24px", md: "30px" }}
+          >
+            <Navbar />
+          </Box>
+
+          <TextArea />
+        </Container>
+      </Box>
+    </>
   );
 }
 
