@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   Divider,
   Flex,
   NumberDecrementStepper,
@@ -11,7 +10,7 @@ import {
   Select,
   Text,
 } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   fetchParagraphs,
@@ -19,14 +18,10 @@ import {
   paragraphsCount,
 } from "../../redux/paragraphsSlice";
 
-
 function Navbar() {
   const dispatch = useDispatch();
-  const [items2, setItems2] = useState([]);
-
   const count = useSelector((state) => state.paragraphs.count);
   const html = useSelector((state) => state.paragraphs.html);
-  const items = useSelector((state) => state.paragraphs.items);
 
   const handleCount = (value) => {
     dispatch(paragraphsCount(value));
@@ -83,9 +78,7 @@ function Navbar() {
             </Select>
           </Box>
         </Flex>
-        <Box alignSelf={"end"} mb={"15px"}>
-         
-        </Box>
+        <Box alignSelf={"end"} mb={"15px"}></Box>
       </Flex>
     </Box>
   );
